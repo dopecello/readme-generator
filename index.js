@@ -10,50 +10,42 @@ const questions = [
     type: "input",
     name: "title",
     message: "Please name your Project.",
-    default: "",
   },
   {
     type: "input",
     name: "description",
     message: "Please describe the purpose and functionality of this project.",
-    default: "",
   },
   {
     type: "checkbox",
     name: "license",
     message: "Please select a license applicable to this project.",
     choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3", "none"],
-    default: "",
   },
   {
     type: "input",
     name: "require",
     message: "List any project dependencies here.",
-    default: "",
   },
   {
     type: "input",
     name: "usage",
     message: "State the languages or technologies associated with this project.",
-    default: "",
   },
   {
     type: "input",
     name: "creator",
     message: "Write your GitHub username.",
-    default: "",
   },
   {
     type: "input",
     name: "name",
     message: "State your full name.",
-    default: "",
   },
   {
     type: "input",
     name: "email",
     message: "Provide a valid email address.",
-    default: "",
   },
   {
     type: "input",
@@ -65,7 +57,6 @@ const questions = [
     type: "input",
     name: "test",
     message: "Provide walkthrough of required tests if applicable.",
-    default: "",
   },
 ];
 
