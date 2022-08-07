@@ -10,70 +10,76 @@ const questions = [
     type: "input",
     name: "title",
     message: "Please name your Project.",
-    default: "No Title",
+    default: "",
   },
   {
     type: "input",
     name: "description",
     message: "Please describe the purpose and functionality of this project.",
-    default: "No description.",
+    default: "",
   },
   {
     type: "checkbox",
     name: "license",
     message: "Please select a license applicable to this project.",
     choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3", "none"],
-    default: "None",
+    default: "",
   },
   {
     type: "input",
     name: "require",
     message: "List any project dependencies here.",
-    default: "No dependencies.",
+    default: "",
   },
   {
     type: "input",
     name: "usage",
     message: "State the languages or technologies associated with this project.",
-    default: "No languages or technologies used.",
+    default: "",
   },
   {
     type: "input",
     name: "creator",
     message: "Write your GitHub username.",
-    default: "N/A",
+    default: "",
   },
   {
     type: "input",
     name: "name",
     message: "State your full name.",
-    default: "N/A",
+    default: "",
   },
   {
     type: "input",
     name: "email",
     message: "Provide a valid email address.",
-    default: "N/A",
+    default: "",
   },
   {
     type: "input",
     name: "contributors",
     message: "Please list any contributors. (Use GitHub usernames)",
-    default: "none"
+    default: ""
   },
   {
     type: "input",
     name: "test",
     message: "Provide walkthrough of required tests if applicable.",
-    default: "N/A",
+    default: "",
   },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Writing README.md File
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+// Initializing app
+function init() {
+    inquirer.prompt(questions)
+    .then((responses) => {
+        console.log('Creating Professional README.md File...');
+        writeToFile('./dist/README.md', generateMarkdown({...responses}));
+    })
+}
 init();
