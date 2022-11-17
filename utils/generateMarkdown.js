@@ -18,8 +18,8 @@ ${data.link}
 ![alt-text](${data.screenshot})
 ## Table of Contents
 * [Features](#features)
-* [Languages & Dependencies](#languages & dependencies)
-* [How to Use This Application](#How to Use This Application)
+* [Languages & Dependencies](#languagesanddependencies)
+* [How to Use This Application](#HowtoUseThisApplication)
 * [Contributors](#contributors)
 * [Testing](#testing)
 * [Questions](#questions)
